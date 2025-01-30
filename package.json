@@ -1,0 +1,6 @@
+{
+  "name": "flatfile",
+  "version": "0.1.0",
+  "description": "walking through flat file persistence",
+  "scripts": { }
+}
