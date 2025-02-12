@@ -1,8 +1,10 @@
 // we're doing this for the parking lot example
 
 import { create } from "./flatfile";
+import fs from "fs";
 
-test('create data', () => {
+test.todo('we need a directory to store all the files');
+test.skip('create data', () => {
   const dataJson = {
     "name": "a sample Parking lot",
     "capacity": 15,
@@ -11,11 +13,23 @@ test('create data', () => {
   const value = create(dataJson, "parkingLot");
 
   expect(value).toBeTruthy();
+  // we can test and compare if the data is in the file
+  // const fileContent = readFile(filePath)
 });
 
+function readFile(filePath: string) {
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            return;
+        }
+        console.log('File content:', data);
+    });
+}
 
 // - We should be able to Create new data
-//     - program ~asks~ EXPECTS the user for an input
-//         - user needs to provide WHERE 
-//     - take the input, the persist in a blank file as a json object
+//     - [x] program  EXPECTS the user for an input
+//         - [x] user needs to provide WHERE 
+//     - [ ] take the input, the persist in a blank file as a json object
+//     - [ ] have a directory to store all the files
 // 

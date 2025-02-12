@@ -14,5 +14,4 @@ export function create(
 ) {
   return data.name;
 }
-// // export function create(parkingLot: ParkingLot): boolean  {}
 
