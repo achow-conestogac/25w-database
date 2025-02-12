@@ -8,7 +8,9 @@ test('create data', () => {
     "capacity": 15,
   };
 
-  create(dataJson, "parkingLot");
+  const value = create(dataJson, "parkingLot");
+
+  expect(value).toBeTruthy();
 });
 
 

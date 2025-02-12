@@ -12,6 +12,7 @@ export function create(
   data: ParkingLot,
   table: string
 ) {
+  return data.name;
 }
 // // export function create(parkingLot: ParkingLot): boolean  {}
 
