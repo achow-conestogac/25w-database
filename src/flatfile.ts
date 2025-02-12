@@ -3,7 +3,15 @@
 // 	capacity: number,
 // }
 // 
-export function create() {
+interface ParkingLot {
+  name: string,
+  capacity: number,
+}
+
+export function create(
+  data: ParkingLot,
+  table: string
+) {
 }
 // // export function create(parkingLot: ParkingLot): boolean  {}
 

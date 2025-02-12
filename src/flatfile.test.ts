@@ -8,7 +8,7 @@ test('create data', () => {
     "capacity": 15,
   };
 
-  create(dataJson, "parkingLot")
+  create(dataJson, "parkingLot");
 });
 
 
