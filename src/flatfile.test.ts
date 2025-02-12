@@ -1,28 +1,19 @@
-test('check that jest is working', () => {
-  expect(true).toBeTruthy();
+// we're doing this for the parking lot example
+
+import { create } from "./flatfile";
+
+test('create data', () => {
+  const dataJson = {
+    "name": "a sample Parking lot",
+    "capacity": 15,
+  };
+
+  create(dataJson, "parkingLot")
 });
 
-test('false is not true', () => {
-  expect(true).toBeFalsy();
-});
-// describe("this is a test", () => {
-// 	test("i am a test", () => {
-// 		expect(true).tobetrue();
-// 	});
-// });
-//
-// console.log("the message")
-// import { create, ParkingLot } from "./flatfile";
+
+// - We should be able to Create new data
+//     - program ~asks~ EXPECTS the user for an input
+//         - user needs to provide WHERE 
+//     - take the input, the persist in a blank file as a json object
 // 
-// const test_data: ParkingLot = {
-// 	parkingLotName: "Lot 1",
-// 	capacity: 15,
-// }
-// 
-// const result = create("parkingLot", test_data);
-// 
-// if (result === true) {
-// 	console.log("success");
-// } else {
-// 	console.log("failed");
-// }
