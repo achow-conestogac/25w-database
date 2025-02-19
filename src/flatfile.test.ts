@@ -14,7 +14,7 @@ test('we need a directory to store all the files', () => {
   // create a directory in the project root.
 
   // Resolve the path to the project root
-  const projectRoot = path.resolve(__dirname, './');
+  const projectRoot = path.resolve(__dirname, '../');
   
   // Define the directory path to check
   const dirPath = path.join(projectRoot, 'flatfileDirectory');

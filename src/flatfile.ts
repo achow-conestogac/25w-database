@@ -13,12 +13,13 @@ interface ParkingLot {
 
 export default class Flatfile {
   constructor() {
-  const projectRoot = path.resolve(__dirname, '../..');
+      const projectRoot = path.resolve(__dirname, '../');
+    
+      const dirPath = path.join(projectRoot, 'flatfileDirectory');
   
-  // Define the directory path to check
-  const dirPath = path.join(projectRoot, 'flatfileDirectory');
-
-  fs.mkdirSync(dirPath)
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath)
+    }
   }
 }
 
