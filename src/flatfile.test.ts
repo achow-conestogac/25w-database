@@ -2,12 +2,24 @@
 
 import Flatfile, { create } from "./flatfile";
 import fs from "fs";
+import path from "path";
 
 test('we need a directory to store all the files', () => {
   // suggestion:
   // the user needs to create a new directory to store the files?
 
   const flatfile = new Flatfile();
+  // what do we expect?
+  // a directory should be created... 
+  // create a directory in the project root.
+
+  // Resolve the path to the project root
+  const projectRoot = path.resolve(__dirname, '../..');
+  
+  // Define the directory path to check
+  const dirPath = path.join(projectRoot, 'flatfileDirectory');
+
+  expect(fs.existsSync(dirPath)).toBeTruthy();
 });
 
 test.skip('create data', () => {
