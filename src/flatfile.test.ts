@@ -1,9 +1,15 @@
 // we're doing this for the parking lot example
 
-import { create } from "./flatfile";
+import Flatfile, { create } from "./flatfile";
 import fs from "fs";
 
-test.todo('we need a directory to store all the files');
+test('we need a directory to store all the files', () => {
+  // suggestion:
+  // the user needs to create a new directory to store the files?
+
+  const flatfile = new Flatfile();
+});
+
 test.skip('create data', () => {
   const dataJson = {
     "name": "a sample Parking lot",

@@ -8,6 +8,8 @@ interface ParkingLot {
   capacity: number,
 }
 
+export default class Flatfile {}
+
 export function create(
   data: ParkingLot,
   table: string
