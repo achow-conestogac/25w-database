@@ -1,6 +1,6 @@
 // we're doing this for the parking lot example
 
-import Flatfile, { create } from "./flatfile";
+import Flatfile from "./flatfile";
 import fs from "fs";
 import path from "path";
 
@@ -28,7 +28,7 @@ test('create data', () => {
     "capacity": 15,
   };
 
-  const value = create(dataJson, "parkingLot");
+  const value = new Flatfile().create(dataJson, "parkingLot");
 
   expect(value).toBeTruthy();
   // we can test and compare if the data is in the file
