@@ -1,8 +1,3 @@
-// export interface ParkingLot {
-// 	parkingLotName: string,
-// 	capacity: number,
-// }
-// 
 import fs from "fs";
 import path from "path";
 
@@ -40,6 +35,4 @@ export default class Flatfile {
     }
   }
 }
-
-
 

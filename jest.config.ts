@@ -7,7 +7,8 @@ const config: Config = {
   testPathIgnorePatterns: [
     "/node_modules/",
     ".*\\.snapshots\\.ts",
-    "/dist/"
+    "/dist/",
+    "./flatfileDirectory"
   ],
   verbose: true,
   coverageProvider: 'v8',
