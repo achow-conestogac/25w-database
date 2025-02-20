@@ -27,6 +27,15 @@ export function create(
   data: ParkingLot,
   table: string
 ) {
+
+  const jsonString = JSON.stringify(data, null, 2);
+  fs.writeFile(table, jsonString, (err) => {
+      if (err) {
+          console.error('Error writing file:', err);
+      } else {
+          console.log('File has been saved successfully.');
+      }
+  });
   return data.name;
 }
 

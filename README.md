@@ -40,7 +40,7 @@ Passing test -> 3 questions
  - did i use (exercise) the production code (target code)
  - did I accomplish my goals
 
-Failing test -> fix the failure
+Failing test -> did soemthign change -> fix the failure
  - look at the failure & do the opposite
      - "no directory found" -> action: create directory
 

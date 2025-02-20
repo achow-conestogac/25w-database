@@ -22,7 +22,7 @@ test('we need a directory to store all the files', () => {
   expect(fs.existsSync(dirPath)).toBeTruthy();
 });
 
-test.skip('create data', () => {
+test('create data', () => {
   const dataJson = {
     "name": "a sample Parking lot",
     "capacity": 15,
@@ -49,5 +49,5 @@ function readFile(filePath: string) {
 //     - [x] program  EXPECTS the user for an input
 //         - [x] user needs to provide WHERE 
 //     - [ ] take the input, the persist in a blank file as a json object
-//     - [ ] have a directory to store all the files
+//     - [x] have a directory to store all the files
 // 
