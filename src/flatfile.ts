@@ -27,15 +27,15 @@ export function create(
   data: ParkingLot,
   table: string
 ) {
-
-  const jsonString = JSON.stringify(data, null, 2);
-  fs.writeFile(table, jsonString, (err) => {
-      if (err) {
-          console.error('Error writing file:', err);
-      } else {
-          console.log('File has been saved successfully.');
-      }
-  });
-  return data.name;
+  try {
+    const jsonString = JSON.stringify(data, null, 2);
+    const filePath = path.join('/path/to/your/directory', `${table}.json`);
+    fs.writeFileSync(filePath, jsonString);
+    console.log('File has been saved successfully.');
+    return true;
+  } catch (err) {
+    console.error('Error writing file:', err);
+    return false;
+  }
 }
 
