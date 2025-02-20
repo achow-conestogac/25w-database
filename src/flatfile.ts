@@ -12,24 +12,24 @@ interface ParkingLot {
 }
 
 export default class Flatfile {
+  private dirPath: string;
+
   constructor() {
       const projectRoot = path.resolve(__dirname, '../');
     
-      const dirPath = path.join(projectRoot, 'flatfileDirectory');
+      this.dirPath = path.join(projectRoot, 'flatfileDirectory');
   
-    if (!fs.existsSync(dirPath)) {
-      fs.mkdirSync(dirPath)
+    if (!fs.existsSync(this.dirPath)) {
+      fs.mkdirSync(this.dirPath)
     }
   }
-}
-
 export function create(
   data: ParkingLot,
   table: string
 ) {
   try {
     const jsonString = JSON.stringify(data, null, 2);
-    const filePath = path.join('/path/to/your/directory', `${table}.json`);
+    const filePath = path.join(dirPath, `${table}.json`);
     fs.writeFileSync(filePath, jsonString);
     console.log('File has been saved successfully.');
     return true;
@@ -38,4 +38,7 @@ export function create(
     return false;
   }
 }
+}
+
+
 
