@@ -23,21 +23,22 @@ export default class Flatfile {
       fs.mkdirSync(this.dirPath)
     }
   }
-export function create(
-  data: ParkingLot,
-  table: string
-) {
-  try {
-    const jsonString = JSON.stringify(data, null, 2);
-    const filePath = path.join(dirPath, `${table}.json`);
-    fs.writeFileSync(filePath, jsonString);
-    console.log('File has been saved successfully.');
-    return true;
-  } catch (err) {
-    console.error('Error writing file:', err);
-    return false;
+
+  create(
+    data: ParkingLot,
+    table: string
+  ) {
+    try {
+      const jsonString = JSON.stringify(data, null, 2);
+      const filePath = path.join(this.dirPath, `${table}.json`);
+      fs.writeFileSync(filePath, jsonString);
+      console.log('File has been saved successfully.');
+      return true;
+    } catch (err) {
+      console.error('Error writing file:', err);
+      return false;
+    }
   }
-}
 }
 
 
